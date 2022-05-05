@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="first-screan">
+        <header>
+            <div class="header__menu">
+                <a class="header-btn btn-dark-1">Рабочее пространство</a>
+                <a class="header-btn btn-dark-2">Недавние</a>
+                <a class="header-btn btn-dark-3">Избранное</a>
+            </div>
+            <div class="suport">
+                <button class="create">Создать</button>
+                <input type="text" placeholder="Поиск....">
+            </div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="user-suport">
+                <a class="mesaege"></a>
+                <a class="user"></a>
+            </div>
+        </header>
+        <main class="block">
+            <div class="side-bar">
+
+                <div class="userBlock">
+                    <div class="userName"><a>User</a></div>
+                    <div class="contacts"><a href="" class="mail">@name</a></div>
+                </div>
+                <div class="userOptions">
+                    <a href="#">Доски</a>
+                    <a href="#">Диалоги</a>
+                    <a href="#">Комментарии</a>
+
+                </div>
+                <div class="navigation">
+                    <a href="#">Рабочие пространства</a>
+                    <a href="#">Недавние</a>
+                    <a href="#">Участники</a>
+                    <a href="#">Настройки</a>
+
+                </div>
+                <div class="out">
+                    <a href="#">Выйти</a>
+                </div>
+            </div>
+
+            <section>
+                <button class="side-menu"></button>
+                <div class="zone">
+                    <p class="primer-1">Рабочее пространство пользователя</p>
+                    <ul class="table-List " id="table_List">
+                        <li id="out"><button class="creatTable" id="add">Создать колонку</button></li>
+                    </ul>
+                </div>
+            </section>
+
+    </div>
+    </main>
+    </div>
+    <dialog>
+        <div class="dialog">
+            <button class="closeBtn">✕</button>
+            <p>Редоктирование</p>
+            <div class="nameCard"><input type="text" name="nameCard" id="nameDo" value="Дело"></div>
+            <div class="cardDescription"><textarea required rows="10" cols="55" id="textElement"></textarea></div>
+            <div class="prioritet">
+                <select value="Приоритетность">
+                    <option class="opt1" value="hige priority"> Hige priority</option>
+                    <option class="opt2" value="medium priority"> Medium priority</option>
+                    <option class="opt3" value="low priority"> Low priority</oprion>
+                </select>
+            </div>
+            <button class="save"> Сохранить</button>
+        </div>
+    </dialog>
+
+    <dialog class="mini-menu">
+        <div>Вы уверены, что хотите отменить редактирование?
+            <button class="Yes">Да</button>
+            <button class="No">Нет</button>
+        </div>
+
+    </dialog>
+    <script type="module" src="/listeners/index.mjs"></script>
+    <script type="module" src="/helpers/index.mjs"></script>
+    <script type="module" src="/helpers/init-app.mjs"></script>
+    <script type="module" src="/components/side-bar.mjs"></script>
+    <script type="module" src="/components/create-table.mjs"></script>
+    <script type="module" src="/models/card.mjs"></script>
+    <script type="module" src="/models/table.mjs"></script>
+    <script type="module" src="/store/card.mjs"></script>
+    <script type="module" src="/store/table.mjs"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
